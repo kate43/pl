@@ -19,12 +19,34 @@ let fact = add a b
 	else gcd (a-b) b
 *)
 
-let rec gcd a b =
+(*let rec gcd a b =
 	match (a,b) with
 	| (1,_) | (_,1) -> 1
 	| _ ->
 		if a=b then a
 		else if a<b then gcd b a
 		else gcd (a-b) b
+*)
 
-let _ = print_endline (string_of_int (gcd 24 4))
+(*let rec sum_of_list l =
+	match l with
+		| [] -> 0
+		| h::t -> h + sum_of_list t
+*)
+
+(*let rec length l =
+	match l with
+		| []-> 0
+		| _::t -> 1+ length t
+*)
+
+
+let _ = print_endline (string_of_int (length [1;2;3;4;5]))
+
+
+
+
+
+
+
+
