@@ -40,8 +40,14 @@ let fact = add a b
 		| _::t -> 1+ length t
 *)
 
+let rec print_list l1 = 
+	match l1 with
+		| [] -> []
+		| h1::t1 -> print_endline(string_of_int(h1))+ print_list(t1); t1
 
-let _ = print_endline (string_of_int (length [1;2;3;4;5]))
+let _ = print_list [1;2;3;4;5]
+
+(*let _ = print_endline (string_of_int (length [1;2;3;4;5]))*)
 
 
 
