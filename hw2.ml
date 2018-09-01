@@ -34,3 +34,15 @@ let rec crazy2val x =
 		| ZERO(x') -> crazy2val(x')
 (*
 let _ = print_endline(string_of_int(crazy2val(MONE(ONE(MONE(ZERO(NIL)))))))*)
+
+let rec decode (x, l) =
+	if (x = 0) then l else 
+	if (x mod 2 = 0) then decode ((x/2), ZERO(l))
+	else decode ((x/2), ONE(l))	
+
+
+let crazy2add (x,y) =
+	let sam = crazy2val x in
+	let sam2 = crazy2val y in
+	let sam3 = sam+sam2 in
+	decode (sam3, NIL)
