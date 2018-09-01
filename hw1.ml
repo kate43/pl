@@ -1,3 +1,10 @@
+let rec iter(n,f)=
+	match (n,f) with
+		| (0,f) fun x->x
+		| (n,f) (f iter(n-1,f))
+
+let _ = print_int(iter(10,x->x+2) 0)
+
 type nat = ZERO | SUCC of nat
 
 let rec natadd (a,b) =
