@@ -1,9 +1,9 @@
 let rec iter(n,f)=
 	match (n,f) with
-		| (0,f) fun x->x
-		| (n,f) (f iter(n-1,f))
+		| (0,f) ->(fun x->x)
+		| (n,f) -> f iter(n-1,f)
 
-let _ = print_int(iter(10,x->x+2) 0)
+let _ = print_int( iter(5,fun x->x+5) 3)
 
 type nat = ZERO | SUCC of nat
 
