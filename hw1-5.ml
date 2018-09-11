@@ -1,4 +1,4 @@
-t = ZERO | SUCC of nat
+type nat = ZERO | SUCC of nat
 
 let rec natadd (a,b) =
 	match(a,b) with
